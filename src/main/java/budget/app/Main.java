@@ -17,8 +17,20 @@ public class Main {
             System.out.println("Categories Added");
             System.out.println("Your new categories are: %s.".formatted(budgetService.categoryList));
         }
+        else {
+            System.out.println("Categories not added");
+        }
+
+        System.out.println("Spending 10 in fooooooooD");
+        budgetService.spend(budgetService.categoryList.getFirst(), new BigDecimal("10.00"));
+        System.out.println("Your remaining budget is: %s.".formatted(budgetService.categoryList));
+        System.out.println("isOverBudget: %s.".formatted(budgetService.categoryList.getFirst().isOverBudget));
 
 
+        System.out.println("Spending 110 in fooooooooD");
+        budgetService.spend(budgetService.categoryList.getFirst(), new BigDecimal("110.00"));
+        System.out.println("Your remaining budget is: %s.".formatted(budgetService.categoryList));
+        System.out.println("isOverBudget: %s.".formatted(budgetService.categoryList.getFirst().isOverBudget));
 
     }
 }
