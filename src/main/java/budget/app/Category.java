@@ -6,6 +6,7 @@ public class Category{
     public String name;
     public BigDecimal budget;
     public BigDecimal spending;
+    public boolean isOverBudget;
 
     public Category(
             String name,
@@ -14,6 +15,7 @@ public class Category{
         this.name = name;
         this.budget = budget;
         this.spending = BigDecimal.ZERO;
+        this.isOverBudget = false;
     }
 
     public String toString(){
